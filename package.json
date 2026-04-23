@@ -12,6 +12,15 @@
       "require": "./dist/monospace-loader.cjs"
     }
   },
+  "author": "Jarek Danielak",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarekdanielak/monospace-loader"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
   "files": ["dist"],
   "scripts": {
     "build": "vite build",
