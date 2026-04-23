@@ -7,6 +7,7 @@ declare module 'react' {
         progress?: number;
         cols?: number;
         color?: string;
+        'track-color'?: string;
       };
     }
   }
@@ -21,7 +22,7 @@ const styles = {
 
 const STATIC_VALUES = [0, 25, 50, 75, 100];
 
-function AnimatedDemo() {
+function AnimatedDemo({ trackColor }: { trackColor?: string }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -31,8 +32,8 @@ function AnimatedDemo() {
 
   return (
     <div style={styles.row}>
-      <span style={styles.label}>{progress}%</span>
-      <monospace-loader progress={progress} />
+      <span style={{ ...styles.label, color: trackColor ? '#a3a3a3' : undefined }}>{progress}%</span>
+      <monospace-loader progress={progress} track-color={trackColor} />
     </div>
   );
 }
@@ -68,13 +69,30 @@ export default function App() {
       </section>
 
       <section style={styles.section}>
-        <h2>Colors</h2>
-        {(['#d35400', '#2980b9', '#27ae60', '#8e44ad'] as const).map((color) => (
+        <h2>Mouth color</h2>
+        {(['#d35400', '#2980b9', '#27ae60'] as const).map((color) => (
           <div key={color} style={styles.row}>
             <span style={styles.label}>{color}</span>
             <monospace-loader progress={50} color={color} />
           </div>
         ))}
+      </section>
+
+      <section style={styles.section}>
+        <h2>Track color</h2>
+        {(['#bebebe', '#2980b9', '#27ae60'] as const).map((trackColor) => (
+          <div key={trackColor} style={styles.row}>
+            <span style={styles.label}>{trackColor}</span>
+            <monospace-loader progress={50} track-color={trackColor} />
+          </div>
+        ))}
+      </section>
+
+      <section style={styles.section}>
+        <h2>Dark mode</h2>
+        <div style={{ ...styles.row, background: '#333', padding: '1rem', borderRadius: 8, width: '50%' }}>
+          <AnimatedDemo trackColor="#aaa" />
+        </div>
       </section>
     </div>
   );

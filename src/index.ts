@@ -6,7 +6,7 @@ const DEFAULT_COLS = 32;
 const DEFAULT_COLOR = '#d35400';
 
 export class MonospaceLoader extends HTMLElement {
-  static observedAttributes = ['progress', 'cols', 'color'];
+  static observedAttributes = ['progress', 'cols', 'color', 'track-color'];
 
   private _mouthOpen = true;
   private _timer: ReturnType<typeof setInterval> | null = null;
@@ -60,8 +60,18 @@ export class MonospaceLoader extends HTMLElement {
     this.setAttribute('color', value);
   }
 
+  get trackColor(): string | null {
+    return this.getAttribute('track-color');
+  }
+
+  set trackColor(value: string) {
+    this.setAttribute('track-color', value);
+  }
+
   private render(): void {
     if (!this.isConnected) return;
+
+    this.style.color = this.trackColor ?? '';
 
     const innerWidth = this.cols - 2;
     const cPos = Math.round((this.progress / 100) * (innerWidth - 1));
