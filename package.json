@@ -1,6 +1,6 @@
 {
   "name": "monospace-loader",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/monospace-loader.cjs",
   "module": "./dist/monospace-loader.js",
@@ -21,7 +21,9 @@
   "peerDependencies": {
     "react": ">=18"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite --config showcase/vite.config.ts",
