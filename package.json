@@ -1,0 +1,31 @@
+{
+  "name": "monospace-loader",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/monospace-loader.cjs",
+  "module": "./dist/monospace-loader.js",
+  "types": "./dist/monospace-loader.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/monospace-loader.d.ts",
+      "import": "./dist/monospace-loader.js",
+      "require": "./dist/monospace-loader.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --config showcase/vite.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.0.0"
+  }
+}
