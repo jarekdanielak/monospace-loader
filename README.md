@@ -1,12 +1,10 @@
 # monospace-loader
 
-A Pac-Man style progress bar built as a framework-agnostic Web Component. Works in plain HTML, React, Vue, or any other framework.
+A monospace, Pac-Man style progress bar built as a framework-agnostic Web Component.
 
-```
-[--------C  o  o  o  o  o  o  o]
-```
+Works in plain HTML, React, Vue, or any other framework.
 
-<!-- gif -->
+![demo](./showcase/demo.gif)
 
 ## Install
 
