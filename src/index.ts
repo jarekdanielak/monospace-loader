@@ -99,3 +99,16 @@ export class MonospaceLoader extends HTMLElement {
 if (!customElements.get('monospace-loader')) {
   customElements.define('monospace-loader', MonospaceLoader);
 }
+
+import { createElement, type HTMLAttributes } from 'react';
+
+export interface MonospaceLoaderProps extends HTMLAttributes<HTMLElement> {
+  progress?: number;
+  cols?: number;
+  color?: string;
+  trackColor?: string;
+}
+
+export default function MonospaceLoaderReact({ trackColor, ...props }: MonospaceLoaderProps) {
+  return createElement('monospace-loader', { 'track-color': trackColor, ...props });
+}

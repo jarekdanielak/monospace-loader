@@ -9,6 +9,10 @@ export default defineConfig({
       fileName: 'monospace-loader',
       formats: ['es', 'cjs'],
     },
+    rollupOptions: {
+      external: ['react'],
+      output: { exports: 'named' },
+    },
   },
   plugins: [
     dts({ rollupTypes: true }),
