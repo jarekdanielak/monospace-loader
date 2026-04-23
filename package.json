@@ -12,6 +12,17 @@
       "require": "./dist/monospace-loader.cjs"
     }
   },
+  "keywords": [
+    "loader",
+    "progress",
+    "progress-bar",
+    "web-component",
+    "custom-element",
+    "react",
+    "monospace",
+    "pacman",
+    "ascii"
+  ],
   "author": "Jarek Danielak",
   "license": "MIT",
   "repository": {
