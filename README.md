@@ -49,6 +49,19 @@ el.progress = 75;
 el.color = 'steelblue';
 ```
 
+## Showcase
+
+The repo includes a React app that demonstrates all props and variants.
+
+```bash
+git clone https://github.com/jarekdanielak/monospace-loader
+cd monospace-loader
+npm install
+npm run dev
+```
+
+The showcase imports `MonospaceLoader` directly from source the same way a React consumer would, so it doubles as a live usage reference.
+
 ## License
 
 MIT
