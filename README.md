@@ -1,6 +1,6 @@
 # monospace-loader
 
-A monospace, Pac-Man style progress bar built as a framework-agnostic Web Component.
+Monospace font-based, Pac-Man style progress bar built as a framework-agnostic Web Component.
 
 Works in plain HTML, React, Vue, or any other framework.
 
@@ -59,8 +59,6 @@ cd monospace-loader
 npm install
 npm run dev
 ```
-
-The showcase imports `MonospaceLoader` directly from source the same way a React consumer would, so it doubles as a live usage reference.
 
 ## License
 
