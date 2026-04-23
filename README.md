@@ -39,7 +39,8 @@ import MonospaceLoader from 'monospace-loader';
 | `progress`     | `progress`   | `number` | `0`       | Fill amount, 0–100                  |
 | `cols`         | `cols`       | `number` | `32`      | Total character width               |
 | `color`        | `color`      | `string` | `#d35400` | Color of the Pac-Man character      |
-| `track-color`  | `trackColor` | `string` | inherited | Color of brackets, dashes, and dots |
+| `track-color`  | `trackColor` | `string`  | inherited | Color of brackets, dashes, and dots |
+| `forever`      | `forever`    | `boolean` | `false`   | Loops indefinitely, ignores `progress` |
 
 All properties can also be set as JS properties:
 

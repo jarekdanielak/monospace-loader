@@ -8,6 +8,7 @@ declare module 'react' {
         cols?: number;
         color?: string;
         'track-color'?: string;
+        forever?: boolean;
       };
     }
   }
@@ -86,6 +87,13 @@ export default function App() {
             <monospace-loader progress={50} track-color={trackColor} />
           </div>
         ))}
+      </section>
+
+      <section style={styles.section}>
+        <h2>Forever</h2>
+        <div style={styles.row}>
+          <monospace-loader forever />
+        </div>
       </section>
 
       <section style={styles.section}>
